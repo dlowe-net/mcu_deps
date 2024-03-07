@@ -1,0 +1,283 @@
+digraph mcu {
+  label="Marvel Cinematic Universe Dependency Chart";
+  ranksep=0.75;
+  
+  graph [fontname="Arial" rankdir="BT"];
+  node [fontname="Arial"];
+  edge [fontname="Arial"];
+
+  # Phase 1
+  ironman1 [label="Iron Man" color=red penwidth=5]
+  thehulk [label="The Incredible Hulk" color=red penwidth=5]
+  ironman2 [label="Iron Man 2" color=red]
+  capamerica1 [label="Captain America:\nThe First Avenger" color=red penwidth=5]
+  thor1 [label="Thor" color=red penwidth=5]
+  avengers [label="The Avengers" color=red]
+
+  # Phase 2
+  ironman3 [label="Iron Man 3" color=orange]
+  thor2 [label="Thor: Dark World" color=orange]
+  capamerica2 [label="Captain America and\nthe Winter Soldier" color=orange]
+  guardians1 [label="Guardians of the Galaxy" color=orange penwidth=5]
+  ageofultron [label="The Avengers:\nAge of Ultron" color=orange]
+  antman [label="Ant-Man" color=orange penwidth=5]
+
+  # Phase 3
+  civilwar [label="The Avengers:\nCivil War" color=purple]
+  docstrange [label="Doctor Strange" color=purple penwidth=5]
+  guardians2 [label="Guardians of the Galaxy 2" color=purple]
+  spidey1 [label="Spider-Man:\nHomecoming" color=purple]
+  thor3 [label="Thor: Ragnorok" color=purple]
+  subgraph cluster_oddball {
+      graph [style="invis"];
+      bpanther1 [label="Black Panther" color=purple penwidth=5];
+      bpanther2 [label="Black Panther 2:\nWakanda Forever" color=blue];
+      whatif1 [label="What If..?\nSeason 1" color=blue shape=box];
+      whatif2 [label="What If...?\nSeason 2" color=green shape=box];
+  }
+  infinitywar [label="The Avengers:\nInfinity War" color=purple]
+  antman2 [label="Ant-Man and the Wasp" color=purple]
+  capmarvel [label="Captain Marvel" color=purple]
+  endgame [label="The Avengers:\nEndgame" color=purple]
+  spidey2 [label="Spider-Man:\nFar From Home" color=purple]
+
+  # Phase 4
+  wandavision [label="WandaVision" color=blue shape=box];
+  falcon [label="The Falcon and the\nWinter Soldier" color=blue shape=box]
+  loki1 [label="Loki" color=blue shape=box]
+  bwidow [label="Black Widow" color=blue]
+  shangchi [label="Shang-Chi:\nThe Legend of the Ten Rings" color=blue]
+  eternals [label="The Eternals" color=blue]
+  hawkeye [label="Hawkeye" color=blue shape=box]
+  spidey3 [label="Spider-Man:\nNo Way Home" color=blue]
+  moonknight [label="Moon Knight" color=blue shape=box]
+  docstrange2 [label="Doctor Strange 2:\nMultiverse of Madness" color=blue]
+  msmarvel [label="Ms. Marvel" color=blue shape=box]
+  thor4 [label="Thor: Love and Thunder" color=blue]
+  shehulk [label="She-Hulk" color=blue shape=box]
+  werewolf [label="Werewolf by Night" color=blue shape=box]
+  guardiansxmas [label="Guardians of the Galaxy\nChristmas Special" color=blue shape=box]
+
+  # Phase 5
+  antman3 [label="Ant-Man and the Wasp:\nQuantumania" color=green]
+  guardians3 [label="Guardians of the Galaxy 3" color=green]
+  secretinvasion [label="Secret Invasion" color=green shape=box]
+  loki2 [label="Loki Season 2" color=green shape=box]
+  themarvels [label="The Marvels" color=green]
+  echo [label="Echo" color=green shape=box]
+  darkhold [label="Agatha:\nDarkhold Diaries" color=green shape=box]
+
+  # TV Series
+  agentshield [label="Agents of S.H.I.E.L.D." color=red shape=box]
+  agentcarter1 [label="Agent Carter\nSeason 1" color=red shape=box]
+  agentcarter2 [label="Agent Carter\nSeason 2" color=red shape=box]
+
+  # Defenders Saga
+  subgraph cluster_defenders {
+  graph [style="invis"];
+  daredevil1 [label="Daredevil\nSeason 1" color=blue shape=box]
+  jjones1 [label="Jessica Jones\nSeason 1" color=blue shape=box]
+  daredevil2 [label="Daredevil\nSeason 2" color=blue shape=box]
+  lukecage1 [label="Luke Cage\nSeason 1" color=blue shape=box]
+  ironfist1 [label="Iron Fist\nSeason 1" color=blue shape=box]
+  defenders [label="The Defenders" color=blue shape=box]
+  punisher1 [label="The Punisher\nSeason 1" color=blue shape=box]
+  jjones2 [label="Jessica Jones\nSeason 2" color=blue shape=box]
+  lukecage2 [label="Luke Cage\nSeason 2" color=blue shape=box]
+  ironfist2 [label="Iron Fist\nSeason 2" color=blue shape=box]
+  daredevil3 [label="Daredevil\nSeason 3" color=blue shape=box]
+  punisher2 [label="The Punisher\nSeason 2" color=blue shape=box]
+  jjones3 [label="Jessica Jones\nSeason 3" color=blue shape=box]
+  }
+  
+  #### Dependencies
+
+  # Iron Man 2 builds on Iron Man 1
+  ironman2 -> ironman1
+
+  # Introduces Black Widow and War Machine
+  avengers -> ironman2
+
+  # Introduces Thor and Loki
+  avengers -> thor1
+
+  # Introduces Captain America and Bucky Barnes
+  avengers -> capamerica1
+
+  # Introduces Hulk
+  avengers -> thehulk
+
+  # Stark's emotions in Iron Man 3 are all about battle of NYC.
+  ironman3 -> avengers;
+
+  # Thor's experiences with Loki are formative in The Dark World.
+  thor2 -> avengers;
+
+  # The Avengers establishes Captain America as a member of S.H.I.E.L.D.
+  capamerica2 -> avengers;
+
+  # Spiderman starts with a cleanup of the battle of NYC.
+  spidey1 -> avengers;
+
+  # The battle of NYC and Stark's subsequent fears are what push Stark to create
+  # Ultron.
+  ageofultron -> avengers;
+
+  # The Winter Soldier is a pivotal character in Civil War.
+  civilwar -> capamerica2;
+
+  # The central plot depends on Tony nearly destroying the world with Ultron.
+  civilwar -> ageofultron;
+
+  # Antman participates in Civil War.
+  civilwar -> antman;
+
+  # The Guardians of the Galaxy need to be established.
+  guardians2 -> guardians1;
+
+  thor3 -> thor2;
+  
+  # Thor 2 introduces Reality Infinity Stone, also pushes Thor to be homeless,
+  # Loki to find a better version of himself.
+  infinitywar -> thor3;
+
+  # Establishes a divided and weakened Avengers, reveals Wakanda as a power,
+  # and highlights Vision as the keeper of the Mind infinity stone.
+  infinitywar -> civilwar;
+
+  # Black Widow is on the run for violating the Sokovia Accords, established in
+  # Civil War.
+  bwidow -> civilwar;
+
+  # Introduces Doctor Strange, Time infinity stone.
+  infinitywar -> docstrange;
+
+  # Introduces guardians, Mantis, Power infinity stone.
+  infinitywar -> guardians2;
+
+  # The Avengers introduces Nick Fury.
+  capmarvel -> avengers;
+
+  # Captain Marvel needs to be introduced for Endgame
+  endgame -> capmarvel;
+
+  # Peter and Tony's relationship is assumed in Infinity War.
+  infinitywar -> spidey1;
+
+  # Spiderman 2 is post-Blip, Tony is gone, Fury tries to step in.
+  spidey2 -> endgame;
+
+  # Plot of Spiderman 3 depends on post-credits Spiderman 2 scene.
+  spidey3 -> spidey2;
+
+  # Backstory on why Wanda is so messed up.
+  wandavision -> endgame
+
+  # Kang the Conqueror is introduced in Loki.  Without it, Quantumania
+  # falls totally flat (who is this Kang guy anyway?).  Probably a
+  # reason for its poor reviews.
+  antman3 -> loki1;
+
+  # Multiverse of Madness is not comprehensible without knowing the events
+  # of WandaVision.  This is a strong dependency.
+  docstrange2 -> wandavision;
+
+  # Wakanda Forever proceeds directly from Black Panther, with very little
+  # influence on the plot from the greater MCU.
+  bpanther2 -> bpanther1;
+
+  # Infinity War and its dependencies are almost enough to entirely
+  # grasp whatif's variants and overarching plot.
+  whatif1 -> infinitywar
+
+  # What If..? has an episode incorporating Killmonger, not appearing in Infinity
+  # War but only introduced in Black Panther
+  whatif1 -> bpanther1
+
+  # What If 2 has no post-Infinity War references, so it really only depends
+  # on What If 1.
+  whatif2 -> whatif1
+
+  # This is bizarre, but the *end credit scene* of Ant-Man and the
+  # Wasp is kind of plot critical, showing how Scott was trapped in
+  # the quantum realm during the blip.  The beginning of endgame makes
+  # no damn sense without this crucial scene.
+  antman2 -> infinitywar;
+  endgame -> antman2;
+
+  # Antman3 definitively starts post-Blip.
+  antman3 -> endgame;
+
+  # Establishes new-Gamora which is important to the plot.
+  guardians3 -> endgame;
+
+  # Main character gains superpowers from Wandavision events.
+  themarvels -> wandavision;
+
+  # Main character gains superpowers from Ms. Marvel events.
+  themarvels -> msmarvel;
+
+  # Agent Carter introduced
+  agentcarter1 -> capamerica1
+  agentcarter2 -> agentcarter1
+  
+  # Iron Man 3 has the Mandarin, which appears later in Shang Chi
+  shangchi -> ironman3;
+
+  # Iron Man 3 introduces the Extremis virus, a plot point in Agents
+  agentshield -> ironman3;
+
+  # Direct sequels
+  daredevil2 -> daredevil1 -> defenders;
+  defenders -> jjones1;
+  defenders -> lukecage1;
+  defenders -> ironfist1;
+  daredevil3 -> defenders;
+  jjones2 -> defenders;
+  lukecage2 -> defenders;
+  ironfist2 -> defenders;
+  punisher1 -> defenders;
+  punisher2 -> punisher1;
+  jjones3 -> jjones2
+
+  # Loki needs context from Thor: Dark World where Frigga dies, and
+  # the Avengers where his variant diverges.
+  loki2 -> loki1 -> thor2;
+
+  # Part of plot needs Clint's failure to save Natasha
+  hawkeye -> endgame;
+
+  # Kingpin's reappearance as a villain happens in Hawkeye
+  hawkeye -> daredevil3;
+
+  # Part of plot revolves around Yelena's anger at Clint
+  hawkeye -> bwidow;
+
+  # Smart Hulk appears in Endgame, and She-Hulk starts with her
+  # relationship with Bruce
+  shehulk -> endgame;
+
+  # Daredevil figures in She-Hulk Epi 8.
+  shehulk -> daredevil3;
+
+  # Part of Secret Invasion is that Fury has lost his contacts
+  # after the Blip
+  secretinvasion -> endgame;
+
+  # Agatha is introduced in Wandavision
+  darkhold -> wandavision;
+
+  # The main story line for Falcon is post-Blip after Cap America gives up his
+  # shield.
+  falcon -> endgame;
+
+  # The beginning starts with Thor's hanging out with the Guardians, which
+  # happens in Endgame
+  thor4 -> endgame;
+
+  # The xmas special assumes reveals and attitudes in Guardians 3
+  guardiansxmas -> guardians3;
+
+  # Echo is introduced in Hawkeye
+  echo -> hawkeye;
+}
