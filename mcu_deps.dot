@@ -28,13 +28,10 @@ digraph mcu {
   guardians2 [label="Guardians of the Galaxy 2" color=purple]
   spidey1 [label="Spider-Man:\nHomecoming" color=purple]
   thor3 [label="Thor: Ragnorok" color=purple]
-  subgraph cluster_oddball {
-      graph [style="invis"];
-      bpanther1 [label="Black Panther" color=purple penwidth=5];
-      bpanther2 [label="Black Panther 2:\nWakanda Forever" color=blue];
-      whatif1 [label="What If..?\nSeason 1" color=blue shape=box];
-      whatif2 [label="What If...?\nSeason 2" color=green shape=box];
-  }
+  bpanther1 [label="Black Panther" color=purple penwidth=5];
+  bpanther2 [label="Black Panther 2:\nWakanda Forever" color=blue];
+  whatif1 [label="What If..?\nSeason 1" color=blue shape=box];
+  whatif2 [label="What If...?\nSeason 2" color=green shape=box];
   infinitywar [label="The Avengers:\nInfinity War" color=purple]
   antman2 [label="Ant-Man and the Wasp" color=purple]
   capmarvel [label="Captain Marvel" color=purple]
