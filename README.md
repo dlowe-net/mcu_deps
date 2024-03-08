@@ -11,3 +11,8 @@ The graph image was generated with [GraphViz](https://graphviz.org/).
 Thank you!
 
 ![MCU Graph](https://raw.githubusercontent.com/dlowe-net/mcu_deps/main/mcu_deps.svg)
+
+Notes:
+
+- Colors are by MCU Phase - Red, Orange, Purple, Blue, Green.
+- Bolded circles are standalone movies with no dependencies.
