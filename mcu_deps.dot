@@ -208,9 +208,6 @@ digraph mcu {
   # Antman3 definitively starts post-Blip.
   antman3 -> endgame;
 
-  # Establishes new-Gamora which is important to the plot.
-  guardians3 -> endgame;
-
   # Main character gains superpowers from Wandavision events.
   themarvels -> wandavision;
 
@@ -228,7 +225,7 @@ digraph mcu {
   agentshield -> ironman3;
 
   # Direct sequels
-  daredevil2 -> daredevil1 -> defenders;
+  defenders -> daredevil2 -> daredevil1;
   defenders -> jjones1;
   defenders -> lukecage1;
   defenders -> ironfist1;
@@ -275,8 +272,12 @@ digraph mcu {
   # happens in Endgame
   thor4 -> endgame;
 
-  # The xmas special assumes reveals and attitudes in Guardians 3
-  guardiansxmas -> guardians3;
+  # Spurred by the events of Endgame and depends on being post-Blip.
+  guardiansxmas -> endgame
+
+  # The Guardian's Christmas special clarifies the relationship
+  # between Quill and Mantis and sets up the beginning of Guardians 3.
+  guardians3 -> guardiansxmas;
 
   # Echo is introduced in Hawkeye
   echo -> hawkeye;
