@@ -23,7 +23,7 @@ digraph mcu {
   antman [label="Ant-Man" color=orange penwidth=5]
 
   # Phase 3
-  civilwar [label="The Avengers:\nCivil War" color=purple]
+  civilwar [label="Captain America:\nCivil War" color=purple]
   docstrange [label="Doctor Strange" color=purple penwidth=5]
   guardians2 [label="Guardians of the Galaxy 2" color=purple]
   spidey1 [label="Spider-Man:\nHomecoming" color=purple]
@@ -220,6 +220,9 @@ digraph mcu {
 
   # Iron Man 3 introduces the Extremis virus, a plot point in Agents
   agentshield -> ironman3;
+
+  # Important Winter Soldier events occur in Agents
+  agentshield -> capamerica2
 
   # Direct sequels
   defenders -> daredevil2 -> daredevil1;
