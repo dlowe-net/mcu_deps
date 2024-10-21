@@ -138,8 +138,8 @@ digraph mcu {
   # Loki to find a better version of himself.
   infinitywar -> thor3;
 
-  # Establishes a divided and weakened Avengers, reveals Wakanda as a power,
-  # and highlights Vision as the keeper of the Mind infinity stone.
+  # Establishes a divided and weakened Avengers, and highlights Vision
+  # as the keeper of the Mind infinity stone.
   infinitywar -> civilwar;
 
   # Black Widow is on the run for violating the Sokovia Accords, established in
@@ -152,14 +152,17 @@ digraph mcu {
   # Introduces guardians, Mantis, Power infinity stone.
   infinitywar -> guardians2;
 
+  # Peter and Tony's relationship is assumed in Infinity War.
+  infinitywar -> spidey1;
+
+  # Black Panther and Wakanda has a significant role in Infinity War.
+  infinitywar -> bpanther1;
+
   # The Avengers introduces Nick Fury.
   capmarvel -> avengers;
 
   # Captain Marvel needs to be introduced for Endgame
   endgame -> capmarvel;
-
-  # Peter and Tony's relationship is assumed in Infinity War.
-  infinitywar -> spidey1;
 
   # Spiderman 2 is post-Blip, Tony is gone, Fury tries to step in.
   spidey2 -> endgame;
